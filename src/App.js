@@ -12,6 +12,7 @@ export default function App() {
   const [downPayment, setDownPayment] = useState(0);
   const [tenure, setTenure] = useState(12);
   const [emi, setEmi] = useState(0);
+  
 
   const calculateEMI = (downpayment) => {
     // EMI amount = [P x R x (1+R)^N]/[(1+R)^N-1]
@@ -28,6 +29,7 @@ export default function App() {
     return Number(EMI / 12).toFixed(0);
   };
 
+  // Calculate the Down Payment
   const calculateDP = (emi) => {
     if (!cost) return;
 
